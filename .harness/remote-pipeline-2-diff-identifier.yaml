@@ -1,7 +1,7 @@
 pipeline:
   name: Kalyan-Harness-Git-Remote-Pipeline
   identifier: KalyanHarnessGitRemotePipeline2
-  projectIdentifier: sunnyQA_test
+  projectIdentifier: sunnyQA_test2
   orgIdentifier: default
   tags: {}
   stages:
