@@ -1,6 +1,6 @@
 pipeline:
   name: Kalyan-Harness-Git-Remote-Pipeline
-  identifier: KalyanHarnessGitRemotePipeline
+  identifier: KalyanHarnessGitRemotePipeline2
   projectIdentifier: sunnyQA_test
   orgIdentifier: default
   tags: {}
