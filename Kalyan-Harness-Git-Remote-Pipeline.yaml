@@ -1,0 +1,110 @@
+pipeline:
+  name: K Template Testing - 2
+  identifier: K_Template_Testing_2
+  projectIdentifier: sunnyQA_test
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: Testing template stage
+        identifier: Testing_template_stage
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "Hello"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
+    - stage:
+        name: Stage 2
+        identifier: Stage_2
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: Testname
+                  identifier: Testname
+                  template:
+                    templateRef: K_Step_Template_1
+                    versionLabel: v0
+                    templateInputs:
+                      type: ShellScript
+                      spec:
+                        environmentVariables:
+                          - name: input_two
+                            type: String
+                            value: <+input>
+              - step:
+                  type: ShellScript
+                  name: shell-script-with-variables
+                  identifier: shellscriptwithvariables
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo 'hello 123'
+                    environmentVariables:
+                      - name: one
+                        type: Number
+                        value: "1"
+                      - name: two
+                        type: Number
+                        value: "2"
+                      - name: three
+                        type: Number
+                        value: "3"
+                      - name: four
+                        type: Number
+                        value: "4"
+                    outputVariables: []
+                  timeout: 10m
+              - step:
+                  type: JenkinsBuild
+                  name: JenkinsBuild_1
+                  identifier: JenkinsBuild_1
+                  spec:
+                    connectorRef: account.jenkins
+                    consoleLogPollFrequency: 5s
+                    jobName: test
+                    jobParameter: []
+                    unstableStatusAsSuccess: false
+                    useConnectorUrlForJobExecution: false
+                  timeout: 10m
+        tags: {}
+        variables:
+          - name: v2
+            type: Number
+            description: ""
+            required: false
+            value: 20
+    - stage:
+        name: dfadsfasd
+        identifier: dfadsfasd
+        template:
+          templateRef: K_Stage_Template_2
+          versionLabel: v0
+          templateInputs:
+            type: Deployment
+            spec:
+              service:
+                serviceRef: <+input>
+                serviceInputs: <+input>
+              environment:
+                infrastructureDefinitions: <+input>
