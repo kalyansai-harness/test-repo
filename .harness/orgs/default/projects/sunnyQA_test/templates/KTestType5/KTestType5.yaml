@@ -2,6 +2,7 @@ template:
   name: KTestType5
   identifier: KTestType5
   versionLabel: v1
+  type: Step
   projectIdentifier: sunnyQA_test
   orgIdentifier: default
   tags: {}
