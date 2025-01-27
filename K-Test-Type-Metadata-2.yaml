@@ -2,7 +2,7 @@ template:
   name: K-Test-Type-Metadata-2
   identifier: KTestTypeMetadata2
   versionLabel: v1
-  type: ABC
+  type: Step
   projectIdentifier: sunnyQA_test
   orgIdentifier: default
   tags: {}
