@@ -1,6 +1,6 @@
 template:
   name: K-Test-Type-Metadata-2
-  identifier: KTestTypeMetadata-2
+  identifier: KTestTypeMetadata2
   versionLabel: v1
   projectIdentifier: sunnyQA_test
   orgIdentifier: default
