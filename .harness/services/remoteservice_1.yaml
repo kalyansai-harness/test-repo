@@ -1,0 +1,25 @@
+service:
+  name: RemoteService-1
+  identifier: remoteservice_1
+  tags: {}
+  serviceDefinition:
+    type: Kubernetes
+    spec:
+      manifests:
+        - manifest:
+            identifier: Mainifest1
+            spec:
+              store:
+                spec:
+                  connectorRef: kk_github_connector
+                  repoName: sdfasd
+                  gitFetchType: Branch
+                  branch: adfa
+                  paths:
+                    - asdfasd
+                type: Github
+              optionalValuesYaml: false
+              enableDeclarativeRollback: false
+              skipResourceVersioning: false
+            type: K8sManifest
+      artifacts: {}
