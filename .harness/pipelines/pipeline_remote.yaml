@@ -6,3 +6,8 @@ pipeline:
         - name: Step
           id: step
           run: echo "hello world"
+      service:
+        sequential: true
+        type: kubernetes
+        items:
+          - service_kubernetes_88e7
