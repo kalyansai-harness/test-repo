@@ -3,6 +3,6 @@ pipeline:
     - name: Stage
       id: stage
       steps:
-        - name: Step
-          id: step
+        - name: Step123
+          id: Step123
           run: echo "hello world"
