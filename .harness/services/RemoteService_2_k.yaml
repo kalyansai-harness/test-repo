@@ -1,7 +1,9 @@
 service:
   name: RemoteService-2-k
   identifier: RemoteService_2_k
+  description: Adding description for edit
   tags: {}
   serviceDefinition:
     type: Kubernetes
-    spec: {}
+    spec:
+      artifacts: {}
