@@ -1,0 +1,8 @@
+environment:
+  name: environment_env_73ff shobit test
+  identifier: environment_env_73ff_shobit_test
+  description: ""
+  tags: {}
+  type: PreProduction
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  projectIdentifier: donotdelete_ivan_balan_proj_in_k8s_org
