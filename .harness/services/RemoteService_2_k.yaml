@@ -1,0 +1,7 @@
+service:
+  name: RemoteService-2-k
+  identifier: RemoteService_2_k
+  tags: {}
+  serviceDefinition:
+    type: Kubernetes
+    spec: {}
