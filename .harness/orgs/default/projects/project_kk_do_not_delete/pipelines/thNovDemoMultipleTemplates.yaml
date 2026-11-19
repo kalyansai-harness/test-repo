@@ -25,5 +25,12 @@ pipeline:
                   spec:
                     duration: 1m
         tags: {}
+    - stage:
+        name: TemplateStage
+        identifier: TemplateStage
+        tags: {}
+        template:
+          templateRef: StageTemplate
+          versionLabel: v1
   identifier: thNovDemoMultipleTemplates
   name: 19thNovDemoMultipleTemplates
