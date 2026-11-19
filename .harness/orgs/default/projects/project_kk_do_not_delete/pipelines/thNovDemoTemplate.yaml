@@ -1,0 +1,29 @@
+pipeline:
+  name: 19thNovDemoTemplate
+  identifier: thNovDemoTemplate
+  projectIdentifier: project_kk_do_not_delete
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: testStage
+        identifier: testStage
+        tags: {}
+        template:
+          templateRef: StageTemplate
+          versionLabel: v1
+    - stage:
+        name: CustomStage
+        identifier: CustomStage
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: Wait
+                  name: Wait_1
+                  identifier: Wait_1
+                  spec:
+                    duration: 1m
+        tags: {}
