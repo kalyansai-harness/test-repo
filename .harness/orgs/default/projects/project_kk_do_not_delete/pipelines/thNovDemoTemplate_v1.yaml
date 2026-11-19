@@ -1,0 +1,21 @@
+pipeline:
+    clone:
+        enabled: false
+    id: thNovDemoTemplate_v1
+    name: 19thNovDemoTemplate
+    stages:
+        - id: testStage
+          name: testStage
+          tags: {}
+          template:
+            uses: StageTemplate_v1@v1
+        - id: CustomStage
+          name: CustomStage
+          runtime: shell
+          steps:
+            - id: Wait_1
+              name: Wait_1
+              wait:
+                duration: 1m
+          tags: {}
+    tags: {}
